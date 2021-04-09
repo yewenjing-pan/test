@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            color: white;
+        }
+
+        ul li {
+            width: 50px;
+            height: 30px;
+            font-size: 20px;
+            line-height: 30px;
+            color: gray;
+            background-color: palegreen;
+            margin: 10px 5px;
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>微博</li>
+        <li>2</li>
+        <li>4</li>
+        <li>5</li>
+        <li>8</li>
+    </ul>
+    <script>
+        var ul = document.querySelector('ul')
+        console.log(ul.children[0].nextElementSibling)
+        console.log(ul.children[0].nextSibling)
+        // 创建节点
+        var li = document.createElement('li')
+        li.innerHTML = '100000'
+        // 添加节点
+        ul.appendChild(li);
+        // 在最前添加元素
+        var lili = document.createElement('li')
+        lili.innerHTML = '*************'
+        ul.insertBefore(lili, ul.children[0])
+        ul.removeChild(ul.children[0])
+    </script>
+</body>
+
+</html>

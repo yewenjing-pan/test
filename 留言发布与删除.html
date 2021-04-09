@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        #txt {
+            border: 2px solid red;
+            width: 300px;
+            height: 200px;
+            font: 6px solid black;
+            text-align: left;
+        }
+
+        li {
+            width: 300px;
+            height: 100px;
+            background-color: royalblue;
+            margin-top: 4px
+        }
+    </style>
+</head>
+
+<body>
+    <div>niahioayfierahfido</div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <textarea name="" id="txt" cols="30" rows="10"></textarea>
+    <button class="fabu">发布</button>
+    <button class="shanchu">删除</button>
+    <script>
+        var body = document.body;
+        var fabu = document.querySelector('.fabu');
+        var shanchu = fabu.nextSibling;
+        var xinUl = document.createElement('ul');
+        body.appendChild(xinUl);
+        fabu.onclick = function () {
+            var txt = document.querySelector('#txt');
+            console.log(txt.value);
+            var li = document.createElement('li')
+            li.innerHTML = txt.value;
+            // console.log(li.innerHTML)
+            xinUl.appendChild(li);
+        }
+    </script>
+</body>
+
+</html>
